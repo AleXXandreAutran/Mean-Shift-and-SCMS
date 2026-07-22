@@ -50,5 +50,3 @@ pytest
 * `bandwidth`: controls KDE smoothing
 * `ridge_dim`: intrinsic dimension of the target ridge
 * `curvature_only`: keeps points satisfying the ridge curvature condition
-
-This implementation is intended for educational use and small datasets.
