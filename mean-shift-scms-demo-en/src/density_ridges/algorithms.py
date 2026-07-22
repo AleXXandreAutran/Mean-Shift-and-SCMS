@@ -1,7 +1,7 @@
 """Mean Shift and SCMS for an isotropic Gaussian KDE.
 
 All observations and query points are represented as arrays of shape
-``(n_samples, ambient_dimension)``.
+ (n_samples, ambient_dimension).
 """
 
 from __future__ import annotations
@@ -61,11 +61,11 @@ def gaussian_kde_stats(
     Parameters
     ----------
     data:
-        Observations of shape ``(n_samples, dimension)``.
+        Observations of shape  (n_samples, dimension).
     points:
-        Query points of shape ``(n_queries, dimension)``.
+        Query points of shape  (n_queries, dimension).
     bandwidth:
-        Positive scalar bandwidth ``h``.
+        Positive scalar bandwidth  h.
     chunk_size:
         Number of query points processed simultaneously.
 
@@ -78,7 +78,7 @@ def gaussian_kde_stats(
     -----
     For the Gaussian KDE,
 
-    ``gradient(p) = p * mean_shift / h**2``.
+     gradient(p) = p * mean_shift / h**2.
 
     The Hessian is evaluated analytically and is used by SCMS to identify
     local normal directions.
@@ -229,9 +229,9 @@ def _normal_subspace(
 ) -> tuple[FloatArray, FloatArray]:
     """Return normal eigenvectors and the ridge curvature eigenvalue.
 
-    ``numpy.linalg.eigh`` returns eigenvalues in ascending order. For a
-    ``ridge_dim``-dimensional ridge in ambient dimension ``D``, the normal
-    subspace is spanned by the ``D - ridge_dim`` smallest-eigenvalue vectors.
+     numpy.linalg.eigh  returns eigenvalues in ascending order. For a
+     ridge_dim -dimensional ridge in ambient dimension  D , the normal
+    subspace is spanned by the  D - ridge_dim  smallest-eigenvalue vectors.
     """
 
     dimension = hessian.shape[-1]
@@ -277,10 +277,10 @@ def scms(
         a surface embedded in 3D.
     curvature_only:
         If true, convergence additionally requires negative normal curvature.
-        All points are still returned; inspect ``curvature_ok`` to filter them.
+        All points are still returned; inspect  curvature_ok  to filter them.
     curvature_tol:
         Require the ridge curvature eigenvalue to be less than
-        ``-curvature_tol``.
+         -curvature_tol .
     """
 
     x = _as_2d_float("data", data)
