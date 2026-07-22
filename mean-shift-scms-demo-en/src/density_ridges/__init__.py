@@ -1,4 +1,4 @@
-"""Educational Mean Shift and SCMS implementation."""
+"""Mean Shift and SCMS implementation."""
 
 from .algorithms import (
     IterationResult,
