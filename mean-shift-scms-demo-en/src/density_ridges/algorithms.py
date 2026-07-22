@@ -1,6 +1,5 @@
 """Mean Shift and SCMS for an isotropic Gaussian KDE.
 
-The implementation is designed for clarity rather than very large datasets.
 All observations and query points are represented as arrays of shape
 ``(n_samples, ambient_dimension)``.
 """
@@ -75,7 +74,7 @@ def gaussian_kde_stats(
     KDEStats
         Density, Mean Shift vector, gradient and Hessian at every query point.
 
-    Notes
+    Remarks 
     -----
     For the Gaussian KDE,
 
