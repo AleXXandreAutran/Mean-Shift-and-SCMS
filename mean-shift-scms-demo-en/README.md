@@ -10,9 +10,7 @@ Implementation of **Mean Shift** and **SCMS** (*Subspace Constrained Mean Shift*
 For a point $x$, the Mean Shift vector is
 
 $$
-m(x)
-=
-\frac{\sum_i w_i(x)X_i}{\sum_i w_i(x)}-x.
+m(x)=\frac{\sum_i w_i(x)X_i}{\sum_i w_i(x)}-x.
 $$
 
 Mean Shift applies the full displacement:
@@ -24,9 +22,7 @@ $$
 SCMS projects this displacement onto the normal subspace of the target ridge:
 
 $$
-x_{t+1}
-=
-x_t+V(x_t)V(x_t)^\top m(x_t).
+x_{t+1}=x_t+V(x_t)V(x_t)^\top m(x_t).
 $$
 
 ## Installation
